@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentSystem {
+    private static final String ADD_STUDENT = "1";
+    private static final String DELET_STUDENT = "2";
+    private static final String EDIT_STUDENT = "3";
+    private static final String QUERY_STUDENT = "4";
+    private static final String EXIT = "5";
+
+    
     public static void startStudentSystem() {
 
         //creat Student List
@@ -22,11 +29,11 @@ public class StudentSystem {
             Scanner sc = new Scanner(System.in);
             String choose = sc.next();
             switch (choose) {
-                case "1" -> addStudent(studentList);
-                case "2" -> deletStudent(studentList);
-                case "3" -> editStudent(studentList);
-                case "4" -> queryStudent(studentList);
-                case "5" -> {
+                case ADD_STUDENT -> addStudent(studentList);
+                case DELET_STUDENT -> deletStudent(studentList);
+                case EDIT_STUDENT -> editStudent(studentList);
+                case QUERY_STUDENT -> queryStudent(studentList);
+                case EXIT -> {
                     System.out.println("Exit");
                     break loop;
                 }
