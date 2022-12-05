@@ -5,6 +5,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class App {
+        private static final String LOGIN = "1";
+    private static final String REGIST = "2";
+    private static final String FORGET_PASSWORD = "3";
+    private static final String EXIT = "4";
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<User> userList = new ArrayList<>();
@@ -17,10 +22,10 @@ public class App {
             System.out.println("Choose(1 - 4):");
             String choose = sc.next();
             switch (choose) {
-                case "1" -> userLogin(userList);
-                case "2" -> userRegist(userList);
-                case "3" -> passWordFoget(userList);
-                case "4" -> {
+                case LOGIN -> userLogin(userList);
+                case REGIST -> userRegist(userList);
+                case FORGET_PASSWORD -> passWordFoget(userList);
+                case EXIT -> {
                     System.out.println("Thank you, goodbye.");
                     System.exit(0);
                 }
