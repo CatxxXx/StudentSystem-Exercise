@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class App {
-        private static final String LOGIN = "1";
+    private static final String LOGIN = "1";
     private static final String REGIST = "2";
     private static final String FORGET_PASSWORD = "3";
     private static final String EXIT = "4";
